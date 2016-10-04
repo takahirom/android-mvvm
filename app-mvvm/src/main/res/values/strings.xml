@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">mvvm-sample</string>
+
+    <string name="text_username">GitHubユーザ名</string>
+    <string name="text_info">Githubユーザ名を入力してください</string>
+    <string name="text_empty_repos">リポジトリなし</string>
+    <string name="text_stars">%d \nスター</string>
+    <string name="text_watchers">%d \nウォッチ</string>
+    <string name="text_forks">%d \nフォーク</string>
+    <string name="text_fork">フォークリポジトリ</string>
+    <string name="text_language">言語: %s</string>
+
+    <string name="error_username_not_found">ユーザがいません</string>
+    <string name="error_loading">何かが起きてエラーになりました</string>
+
+</resources>

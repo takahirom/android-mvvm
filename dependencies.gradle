@@ -1,0 +1,43 @@
+ext {
+    supportLibraryVersion = '24.2.0'
+    daggerVersion = '2.6'
+    parcelerVersion = '1.1.5'
+    icepickVersion = '3.2.0'
+    rxLifecycleVersion = '0.7.0'
+    retrofitVersion = '2.1.0'
+
+    dependencies = [
+            appCompat             : "com.android.support:appcompat-v7:$supportLibraryVersion",
+            cardView              : "com.android.support:cardview-v7:$supportLibraryVersion",
+            recyclerView          : "com.android.support:recyclerview-v7:$supportLibraryVersion",
+
+            dagger                : "com.google.dagger:dagger:2.6",
+            daggerCompiler        : "com.google.dagger:dagger-compiler:2.6",
+            parceler              : "org.parceler:parceler:1.1.5",
+            parcelerApi           : "org.parceler:parceler-api:1.1.5",
+            icepick               : "frankiesardo:icepick:$icepickVersion",
+            icepickProcessor      : "frankiesardo:icepick-processor:$icepickVersion",
+            rxAndroid             : "io.reactivex:rxandroid:1.1.0",
+            rxLifecycle           : "com.trello:rxlifecycle:$rxLifecycleVersion",
+            rxLifecycleAndroid    : "com.trello:rxlifecycle-android:$rxLifecycleVersion",
+            rxLifecycleComponents : "com.trello:rxlifecycle-components:$rxLifecycleVersion",
+            rxLifecycleNavi       : "com.trello:rxlifecycle-navi:$rxLifecycleVersion",
+            retrofit              : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitConverterMoshi: "com.squareup.retrofit2:converter-moshi:$retrofitVersion",
+            retrofitAdapterRxJava : "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion",
+            eventBus              : "org.greenrobot:eventbus:3.0.0",
+            picasso               : 'com.squareup.picasso:picasso:2.5.2',
+            circleImageView       : 'de.hdodenhof:circleimageview:1.3.0',
+
+            jUnit                 : "junit:junit:4.12",
+            mockito               : "org.mockito:mockito-core:1.10.19",
+            hamcrest              : "org.hamcrest:hamcrest-library:1.3",
+            robolectric           : "org.robolectric:robolectric:3.0",
+
+            supportTestRunner     : "com.android.support.test:runner:0.5",
+            supportAnnotations    : "com.android.support:support-annotations:$supportLibraryVersion",
+            espresso              : "com.android.support.test.espresso:espresso-core:2.2.2",
+            retrofitMock          : "com.squareup.retrofit2:retrofit-mock:$retrofitVersion",
+            assertjAndroid        : "com.squareup.assertj:assertj-android:1.1.1"
+    ]
+}

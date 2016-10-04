@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "sample.mvvm"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    Map<String, String> dependencies = rootProject.ext.dependencies
+
+    compile dependencies.appCompat
+    compile dependencies.cardView
+    compile dependencies.recyclerView
+
+    annotationProcessor dependencies.daggerCompiler
+    compile dependencies.dagger
+    compile dependencies.eventBus
+
+    compile dependencies.retrofit
+    compile dependencies.retrofitConverterMoshi
+    compile dependencies.retrofitAdapterRxJava
+    compile dependencies.rxAndroid
+    compile dependencies.rxLifecycle
+    compile dependencies.rxLifecycleAndroid
+    compile dependencies.rxLifecycleComponents
+
+    annotationProcessor dependencies.parceler
+    compile dependencies.parcelerApi
+    compile dependencies.icepick
+    provided dependencies.icepickProcessor
+
+    compile dependencies.picasso
+    compile dependencies.circleImageView
+
+    compile project(':lib-github-api')
+
+    testCompile dependencies.jUnit
+    testCompile dependencies.hamcrest
+    testCompile dependencies.mockito
+    testCompile dependencies.robolectric
+    androidTestCompile dependencies.supportTestRunner
+    androidTestCompile dependencies.supportAnnotations
+    androidTestCompile (dependencies.espresso) {
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
+    }
+    androidTestCompile dependencies.retrofitMock
+    androidTestCompile dependencies.assertjAndroid
+}
